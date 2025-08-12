@@ -14,8 +14,16 @@ namespace InventoryMgmt
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked == false)
-                PasswordTb
+            if (checkBox1.Checked)
+                maskedTextBox1.PasswordChar = '\0';
+            else
+                maskedTextBox1.PasswordChar = '•';
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = "";
+            maskedTextBox1.Text = "";
         }
     }
 }
